@@ -5,19 +5,19 @@ export default class extends BaseSchema {
 
   async up() {
     this.schema.createTable(this.tableName, (table) => {
-      table.increments('id').notNullable()
+      table.bigIncrements('id').notNullable()
       table.string('school_name', 150).notNullable()
       table.string('address').notNullable()
-      table.string('phone_no')
+      table.string('phone_no').nullable()
       table.string('email', 150).unique()
-      table.string('motto').notNullable()
-      table.text('vision')
-      table.text('mission')
-      table.string('latitude')
-      table.string('longitude')
-      table.string('year_established', 11)
-      table.timestamp('created_at').notNullable()
-      table.timestamp('updated_at').notNullable()
+      table.string('motto').nullable()
+      table.text('vision').nullable()
+      table.text('mission').nullable()
+      table.string('latitude').nullable()
+      table.string('longitude').nullable()
+      table.string('year_established', 11).nullable()
+      table.timestamp('created_at')
+      table.timestamp('updated_at').nullable()
     })
   }
 

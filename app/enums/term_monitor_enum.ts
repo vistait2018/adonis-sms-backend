@@ -1,0 +1,9 @@
+enum TermMonitor {
+  FIRST_TERM_STARTED = 1,
+  FIRST_TERM_ENDED = 2,
+  SECOND_TERM_STARTED = 3,
+  SECOND_TERM_ENDED = 4,
+  THIRD_TERM_STARTED = 5,
+  THIRD_TERM_ENDED = 6,
+}
+export default TermMonitor

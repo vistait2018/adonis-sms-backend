@@ -1,6 +1,6 @@
-enum Category {
+enum CategoryType {
   PRIMARY = 1,
   SECONDARY = 2,
 }
 
-export default Category
+export default CategoryType

@@ -1,4 +1,4 @@
-enum Role {
+enum RoleEnum {
   SUPER_ADMIN = 1,
   ADMIN = 2,
   HEAD_TEACHER = 3,
@@ -11,4 +11,4 @@ enum Role {
   USER = 10,
 }
 
-export default Role
+export default RoleEnum

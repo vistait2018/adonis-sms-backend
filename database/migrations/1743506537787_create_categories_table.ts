@@ -1,16 +1,15 @@
 import { BaseSchema } from '@adonisjs/lucid/schema'
+import CategoryType from '../../app/enums/category_enums.js'
+
 
 export default class extends BaseSchema {
-  protected tableName = 'users'
+  protected tableName = 'categories'
 
   async up() {
     this.schema.createTable(this.tableName, (table) => {
-      table.bigIncrements('id').notNullable()
-      table.bigInteger('role_id').unsigned().references('roles.id').nullable()
+      table.bigIncrements('id')
       table.bigInteger('school_id').unsigned().references('schools.id').nullable()
-      table.string('email', 254).notNullable().unique()
-      table.string('password').notNullable()
-      table.boolean('is_locked').defaultTo(true)
+      table.enum('category_name', [CategoryType.PRIMARY, CategoryType.SECONDARY]).notNullable()
       table.timestamp('created_at')
       table.timestamp('updated_at').nullable()
     })
