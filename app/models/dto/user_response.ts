@@ -15,6 +15,4 @@ export default class UserResponse {
     this.updatedAt = user.updatedAt
     this.roleId = user.roleId
   }
-
-  
 }

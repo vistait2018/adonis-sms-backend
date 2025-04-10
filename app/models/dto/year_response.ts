@@ -1,5 +1,4 @@
-import TermEnum from '../../enums/term_enums.js'
-import TermMonitor from '../../enums/term_monitor_enum.js'
+
 
 export default class YearResponse {
   id: number
