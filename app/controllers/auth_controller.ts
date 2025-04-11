@@ -235,6 +235,9 @@ export default class AuthController {
   }
 
   async unlockUser({ auth, response, params }: HttpContext) {
+
+   
+
     try {
       const loggedInUser = auth.user?.roleId
 
